@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO: page title and description -->
+  <title>Mahalakhsmi  | Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Mahalakhsmi P, a Web Developer skilled in HTML, CSS, JavaScript, React.js, Node.js, REST APIs and Shopify, based in Tirunelveli, Tamil Nadu." />
+  <meta name="theme-color" content="#0b0f1a" />
+
+  <!-- Apply the saved theme before the page paints (prevents a flash of the wrong theme).
+       Dark mode is the default; Light mode is used only if the visitor chose it. -->
+  <script>
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") === "light" ? "light" : "dark");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
+
+  <!-- Fonts and icons (both free) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Main navigation">
+      <!-- <a href="#home" class="logo" aria-label="Go to top">M<span></span></a> -->
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link"><i class="fa-solid fa-house" aria-hidden="true"></i>Home</a></li>
+        <li><a href="#about" class="nav-link"><i class="fa-solid fa-user" aria-hidden="true"></i>About</a></li>
+        <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</a></li>
+        <li><a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i>Skills</a></li>
+        <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</a></li>
+        <li><a href="#projects" class="nav-link"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>Projects</a></li>
+        <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a></li>
+        <!-- Theme toggle: sun in Dark mode (default), half-moon in Light mode -->
+        <!-- <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button></li> -->
+     <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-glow glow-1" aria-hidden="true"></div>
+      <div class="hero-glow glow-2" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Mahalakhsmi</h1>
+          <!-- The title text is wrapped in #rotatingTitle so it can change automatically -->
+          <h2 class="hero-role"><span class="rotating-title" id="rotatingTitle">Web Developer</span><span class="cursor" aria-hidden="true">|</span></h2>
+          <p class="hero-intro">
+            Aspiring Web Developer with hands-on experience in building user-friendly websites and web applications using HTML, CSS, JavaScript, React.js, Node.js, and Shopify. I enjoy turning ideas into clean, reusable, and well-tested interfaces.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/Mahalakhsmi_P_web_developer.pdf" class="btn btn-outline" download="Mahalakhsmi_P_web_developer.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          <div class="social-links">
+            <!-- GitHub / LinkedIn URLs are set once in script.js (PROFILE_LINKS) -->
+            <a href="#" class="placeholder-link" data-social="github" data-label="[Add GitHub URL]" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="placeholder-link" data-social="linkedin" data-label="[Add LinkedIn URL]" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:lakshmimaha5141@gmail.com" aria-label="Send an email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Who I am</h2>
+        </div>
+
+        <!-- ===== WHO I AM (new) ===== -->
+        <div class="who-grid">
+          <!-- Left: intro + 4 info boxes -->
+          <div class="who-left">
+            <p class="who-intro reveal">
+              I'm <strong>Mahalakhsmi</strong>, a Web Developer with experience in HTML, CSS, JavaScript,
+              React.js, Node.js, REST APIs and Shopify. I build responsive websites, reusable components
+              and user-friendly web applications, and I enjoy turning ideas into clean interfaces.
+            </p>
+
+            <div class="who-boxes">
+              <div class="who-box glow-box reveal" tabindex="0">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                  <h3>Education</h3>
+                  <p>Bachelor of Computer Science</p>
+                  <small>St Johns College, Palayamkottai</small>
+                </div>
+              </div>
+
+              <div class="who-box glow-box reveal" tabindex="0">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <div>
+                  <h3>Technical Interests</h3>
+                  <p>Front-End Development, Full-Stack Web Development, React.js, Node.js, Shopify</p>
+                </div>
+              </div>
+
+              <div class="who-box glow-box reveal" tabindex="0">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                <div>
+                  <h3>Career Objective</h3>
+                  <p>To build efficient, user-friendly web solutions and grow as a full-stack developer.</p>
+                </div>
+              </div>
+
+              <div class="who-box glow-box reveal" tabindex="0">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                <div>
+                  <h3>Core Strengths</h3>
+                  <p>Responsive Design, Reusable Components, API Integration, Debugging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: stats -->
+          <div class="who-stats">
+            <div class="who-stat glow-box reveal" tabindex="0"><strong>3</strong><span>Projects Completed</span></div>
+            <div class="who-stat glow-box reveal" tabindex="0"><strong>1</strong><span>Internship</span></div>
+            <div class="who-stat glow-box reveal" tabindex="0"><strong>2</strong><span>Shopify Stores Built</span></div>
+            <div class="who-stat glow-box reveal" tabindex="0"><strong>10+</strong><span>Technologies</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Education</span>
+          <h2 class="section-title">My academic background</h2>
+        </div>
+        <div class="card-grid one">
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <span class="date">2022 – 2025</span>
+            <h3>Bachelor of Computer Science</h3>
+            <p class="muted">St Johns College, Palayamkottai</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Technical Skills</span>
+          <h2 class="section-title">Technologies I work with</h2>
+        </div>
+        <div class="card-grid three">
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-code"></i> Programming Language</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-palette"></i> Frontend Technologies</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-html5"></i> HTML</span>
+              <span class="chip"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+              <span class="chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-server"></i> Backend Technologies</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="chip"><i class="fa-solid fa-plug"></i> REST APIs</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-cubes"></i> Frameworks &amp; Libraries</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="chip"><i class="fa-solid fa-diagram-project"></i> React Hooks</span>
+              <span class="chip"><i class="fa-solid fa-route"></i> React Router</span>
+              <span class="chip"><i class="fa-solid fa-share-nodes"></i> Context API</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-store"></i> E-commerce &amp; CMS</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-shopify"></i> Shopify</span>
+              <span class="chip"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools &amp; Practices</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="chip"><i class="fa-solid fa-bug"></i> Debugging</span>
+              <span class="chip"><i class="fa-solid fa-vial"></i> Manual Testing</span>
+              <span class="chip"><i class="fa-solid fa-mobile-screen"></i> Responsive Design</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Experience &amp; Internship</span>
+          <h2 class="section-title">Where I've worked</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Work experience -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card">
+              <span class="date">2025 – 2026</span>
+              <h3>Web Developer</h3>
+              <p class="company"><i class="fa-solid fa-building"></i> Pragan Tech Solutions</p>
+              <h4>Responsibilities</h4>
+              <ul class="list">
+                <li>Worked in web development, software testing and debugging.</li>
+                <li>Built responsive, user-friendly web pages using HTML, CSS and JavaScript.</li>
+                <li>Performed manual testing, bug fixing and API integration.</li>
+                <li>Maintained web applications using responsive design and reusable components.</li>
+              </ul>
+              <h4>Key contributions</h4>
+              <ul class="list">
+                <li>Developed two e-commerce websites using Shopify.</li>
+                <li>Worked on product management, shopping cart, wishlist, user authentication and checkout features.</li>
+                <li>Worked as a Junior Developer on a Multi-Tenant School ERP SaaS application, building frontend and backend features with React.js, JavaScript and Node.js.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Internship -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card">
+              <span class="date">June 2025 – Aug 2026</span>
+              <h3>Front-End Developer – Intern</h3>
+              <p class="company"><i class="fa-solid fa-building"></i> Coder Profession</p>
+              <h4>Key contribution</h4>
+              <ul class="list">
+                <li>Built a responsive KFC clone e-commerce website using React.js (see Featured Projects).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Featured Projects</span>
+          <h2 class="section-title">Things I've built</h2>
+        </div>
+
+        <!-- All project cards sit inside ONE grid wrapper -->
+        <div class="card-grid two">
+
+          <!-- 1. Pragan Amla Traders -->
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <div class="card-icon"><i class="fa-brands fa-shopify"></i></div>
+              <!-- <span class="date">2025 – 2026</span> -->
+            </div>
+            <h3>Pragan Amla Traders</h3>
+            <p class="muted project-desc">Developed an e-commerce website using React.js, Node.js, and Shopify.</p>
+            <h4 class="features-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Features</h4>
+            <ul class="list">
+              <li>Responsive user interface designed with HTML and CSS.</li>
+              <li>User management and admin management.</li>
+              <li>Secure online payment processing with Razorpay.</li>
+              <li>Product and e-commerce functionalities managed through Shopify.</li>
+              <li>Product management.</li>
+              <li>Shopping cart and wishlist.</li>
+              <li>User authentication.</li>
+              <li>Checkout features.</li>
+            </ul>
+            <div class="chips small">
+              <span class="chip">React Js</span><span class="chip">Node Js</span><span class="chip">Shopify</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            </div>
+            <!-- <div class="project-links">
+              <a href="#" class="placeholder-link" data-label="[Add Live Demo URL]"><i class="fa-solid fa-arrow-up-right-from-square"></i> [Add Live Demo URL]</a>
+            </div> -->
+          </article>
+
+          <!-- 2. Multi-Tenant School ERP SaaS -->
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <div class="card-icon"><i class="fa-solid fa-school-flag"></i></div>
+              <!-- <span class="date">2025 – 2026</span> -->
+            </div>
+            <h3>Multi-Tenant School ERP SaaS</h3>
+            <p class="muted project-desc">I worked as a Junior Developer to develop a multi-tenant School ERP platform using React, Node.js, Express, and MongoDB, with separate portals for Admins, Teachers, Students, and Parents.</p>
+            <h4 class="features-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Features</h4>
+            <ul class="list">
+              <li>Separate portals for Admins, Teachers, Students and Parents.</li>
+              <li>Role-based access control.</li>
+              <li>Examinations and attendance tracking.</li>
+              <li>Multi-mode student attendance: manual grids, dynamic QR code badge scanning, geolocation radius validation and IP network locking.</li>
+              <li>Real-time chat and notifications using Socket.io.</li>
+              <li>PDF report generation, including client-side report cards and fee receipts with jsPDF and PDFKit.</li>
+              <li>Dual-flow Razorpay payments separating platform subscription billing from tenant-specific merchant fee collections.</li>
+              <li>AWS integrations.</li>
+              <li>Frontend deployed on Firebase and backend on Render.</li>
+            </ul>
+            <div class="chips small">
+              <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">TailwindCSS</span><span class="chip">Razorpay</span><span class="chip">AWS</span>
+            </div>
+          </article>
+
+          <!-- 3. SPS Spices & Dry Fruits -->
+          <article class="card project-card reveal span-2">
+            <div class="project-top">
+              <div class="card-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+              <!-- <span class="date">Full-Stack Project</span> -->
+            </div>
+            <h3>SPS Spices &amp; Dry Fruits</h3>
+            <p class="muted project-desc">Designed and deployed responsive UI components, cart management, and interactive admin control centers using Ant Design, TailwindCSS, and Framer Motion.</p>
+            <h4 class="features-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Features</h4>
+            <ul class="list">
+              <li>Responsive UI components, cart management and interactive admin control centers.</li>
+              <li>Dynamic GST engine calculating intra-state (CGST + SGST) and inter-state (IGST) tax splits automatically.</li>
+              <li>Formatted tax receipts injected into Shopify Order Note Attributes.</li>
+              <li>Secure Razorpay payments with HMAC-SHA256 server-side signature verification.</li>
+              <li>Transactional email notifications via Nodemailer.</li>
+              <li>Product and e-commerce functionalities managed through Shopify.</li>
+              <li>Product management.</li>
+              <li>Shopping cart and wishlist.</li>
+              <li>User authentication.</li>
+              <li>Checkout features.</li>
+              <li>Frontend hosted on Firebase and API server on Render.</li>
+            </ul>
+            <div class="chips small">
+              <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Shopify</span><span class="chip">Shopify API</span><span class="chip">Razorpay</span>
+            </div>
+          </article>
+
+          <!-- 4. KFC Clone -->
+          <article class="card project-card reveal span-2">
+            <div class="project-top">
+              <div class="card-icon"><i class="fa-solid fa-burger"></i></div>
+              <!-- <span class="date">June 2025 – Aug 2026</span> -->
+            </div>
+            <h3>KFC Clone – E-commerce Website - Internship</h3>
+            <p class="muted project-desc">A responsive front-end e-commerce website built with React.js during my Front-End Developer internship at Coder Profession.</p>
+            <h4 class="features-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Features</h4>
+            <ul class="list">
+              <li>Reusable functional components with React Hooks.</li>
+              <li>Global state management with Context API for cart items, item count and order placement across pages.</li>
+              <li>React Router for seamless page navigation.</li>
+              <li>REST API integration to fetch and display product data dynamically.</li>
+              <li>Sign In / Sign Up forms with basic form validation.</li>
+              <li>Responsive UI with CSS3 for mobile and desktop.</li>
+            </ul>
+            <div class="chips small">
+              <span class="chip">React.js</span><span class="chip">React Hooks</span><span class="chip">Context API</span>
+              <span class="chip">React Router</span><span class="chip">REST API</span><span class="chip">CSS3</span>
+            </div>
+            <!-- <div class="project-links">
+              <a href="#" class="placeholder-link" data-label="[Add GitHub URL]"><i class="fa-brands fa-github"></i> [Add GitHub URL]</a>
+              <a href="#" class="placeholder-link" data-label="[Add Live Demo URL]"><i class="fa-solid fa-arrow-up-right-from-square"></i> [Add Live Demo URL]</a>
+            </div> -->
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+<!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Let's work together</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>I'm open to web developer opportunities. Send me a message and I'll get back to you.</p>
+            <ul class="info-card">
+              <li><i class="fa-solid fa-phone"></i><div><small>Phone</small><strong><a href="tel:+918637493949">8637493949</a></strong></div></li>
+              <li><i class="fa-solid fa-envelope"></i><div><small>Email</small><strong><a href="mailto:lakshmimaha5141@gmail.com">lakshmimaha5141@gmail.com</a></strong></div></li>
+              <li><i class="fa-solid fa-location-dot"></i><div><small>Location</small><strong>Tirunelveli, Tamil Nadu</strong></div></li>
+              <li><i class="fa-brands fa-linkedin-in"></i><div><small>LinkedIn</small><strong><a href="#" class="placeholder-link" data-social="linkedin" data-show-url data-label="[Add LinkedIn URL]">LinkedIn Profile</a></strong></div></li>
+              <li><i class="fa-brands fa-github"></i><div><small>GitHub</small><strong><a href="#" class="placeholder-link" data-social="github" data-show-url data-label="[Add GitHub URL]">GitHub Profile</a></strong></div></li>
+            </ul>
+            <a href="/Mahalakhsmi_P_web_developer.pdf" class="btn btn-primary resume-btn" download="Mahalakhsmi_P_web_developer.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="nameError" />
+              <small class="error" id="nameError" role="alert"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="emailError" />
+              <small class="error" id="emailError" role="alert"></small>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required aria-describedby="subjectError" />
+              <small class="error" id="subjectError" role="alert"></small>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="messageError"></textarea>
+              <small class="error" id="messageError" role="alert"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <!-- <p class="form-note">
+              <i class="fa-solid fa-circle-info"></i>
+              Note: a static website cannot send email by itself. A backend or form service (for example Formspree or Netlify Forms)
+              is required for real email delivery. Until one is connected, this form opens your email app with the message filled in.
+            </p> -->
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h5 class="footer-name">Mahaa</h5>
+          <p class="footer-tagline">Web Developer | React.js, Node.js &amp; Shopify</p>
+        </div>
+        <div class="social-links small">
+          <a href="#" class="placeholder-link" data-social="github" data-label="[Add GitHub URL]" aria-label="GitHub profile" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="placeholder-link" data-social="linkedin" data-label="[Add LinkedIn URL]" aria-label="LinkedIn profile" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:lakshmimaha5141@gmail.com" aria-label="Send an email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>@ 2026 <span id="year"></span>Mahalakhsmi. All Rights Reserved.</p>
+        <!-- <p>Built with <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i> using HTML, CSS &amp; JavaScript</p> -->
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
